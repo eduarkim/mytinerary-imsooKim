@@ -3,12 +3,12 @@ import { Link } from 'react-router-dom';
 
 const Sidebar = () => {
   return (
-    <nav className="bg-gray-700 h-full w-64 p-4">
-      <ul>
-        <li><Link to="/Cities" className="text-white">Cities</Link></li>
-        {/* Otras opciones del menú */}
-      </ul>
-    </nav>
+    <aside className="bg-gray-200 p-4 hidden md:block">
+      <nav className="space-y-2">
+        <Link to="/" className="block hover:underline">Home</Link>
+        <Link to="/cities" className="block hover:underline">Cities</Link>
+      </nav>
+    </aside>
   );
 };
 

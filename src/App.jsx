@@ -11,12 +11,12 @@ function App() {
     <Router>
       <div className="w-screen h-screen overflow-x-hidden flex flex-col">
         <Header />
-        <div className="flex flex-1">
-          <Sidebar />
-          <main className="min-h-screen flex-1">
+        <div className="flex flex-1 flex-col md:flex-row">
+          <Sidebar className="w-full md:w-1/4"/>
+          <main className="min-h-screen flex-1 p-4">
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="./cities" element={<div>Cities Page</div>} />
+              <Route path="./cities" element={<Cities/>} />
             </Routes>
           </main>
         </div>
